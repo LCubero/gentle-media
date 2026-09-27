@@ -1,0 +1,5 @@
+Attach exactly one authentic transparent Engram logo. Preserve its real silhouette, embedded wordmark and colors; draw color harmony from the attachment, not an invented official palette or substitute mark.
+
+Create one static high-resolution 9:20 portrait phone wallpaper, approximately 1440 × 3200 px or higher. Hold the intact logo within a generous central crop-safe zone; leave the top clock and bottom phone-UI areas empty, with expendable edges. Use quiet translucent layers and a single selected luminous fragment: an abstract metaphor for selectively saved and later retrieved memory, not automatic capture of everything. Keep the composition calm and legible at phone scale.
+
+The only permitted on-image name is Engram, once at most. Do not duplicate an embedded wordmark; if exact text cannot be rendered, leave space for manual typesetting. No other letters, slogans, claims, fake readable code, UI, screenshots, invented icons or imitation logos. Do not promise universal device compatibility.

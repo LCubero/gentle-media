@@ -1,0 +1,5 @@
+Attach exactly one authentic transparent Gentleman Programming logo. Use its actual silhouette, embedded wordmark and colors as the sole identity reference; do not invent a palette or redraw a lookalike.
+
+Create one static high-resolution 9:20 portrait phone wallpaper, approximately 1440 × 3200 px or higher. Center the intact logo in a generous crop-safe middle zone; leave the top clock region and bottom phone-UI region empty. Keep edges expendable. Use restrained architectural graphite planes and quiet directional light, with color harmony derived from the attached asset. Suggest disciplined programming through abstract measured paths, not readable code or screens. Keep it legible at phone scale.
+
+The only permitted on-image name is Gentleman Programming, once at most: retain an embedded wordmark without duplicating it; otherwise typeset the exact name only if reliable, or leave clean space for manual typesetting. No other lettering, slogans, claims, invented icons, imitation logos, fake readable code, UI or screenshots. Do not promise universal device compatibility.

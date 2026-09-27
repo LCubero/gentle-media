@@ -1,0 +1,812 @@
+# GitHub Project Media — ADHD Cheat Sheet
+
+> Referencia rápida para crear screenshots, banners, GIFs y videos de proyectos.
+
+---
+
+## 1. Starter Pack
+
+Por cada proyecto:
+
+- [ ] `github-social-preview.png` — **1280×640**
+- [ ] `hero-desktop.png` — **1920×1080**
+- [ ] `hero-mobile.png` — **1080×1920**
+- [ ] `thumbnail-16x9.png` — **1920×1080**
+- [ ] `thumbnail-9x16.png` — **1080×1920**
+- [ ] `demo-16x9.mp4` — **1920×1080**
+- [ ] `demo-9x16.mp4` — **1080×1920**
+- [ ] `demo-readme.gif` — **800–1200 px ancho**
+- [ ] 2–4 screenshots desktop
+- [ ] 2–4 screenshots mobile
+- [ ] `social-square.png` — **1080×1080**
+- [ ] `social-portrait.png` — **1080×1350**
+
+---
+
+# 2. Ratios
+
+| Ratio | Resolución base | Uso |
+|---|---:|---|
+| **16:9** | 1920×1080 | Desktop, videos, hero, YouTube |
+| **9:16** | 1080×1920 | Mobile, Reels, Shorts, TikTok |
+| **1:1** | 1080×1080 | Social |
+| **4:5** | 1080×1350 | Feed vertical |
+| **2:1** | 1280×640 | GitHub Social Preview |
+
+### Regla rápida
+
+```text
+Desktop → 16:9
+Mobile  → 9:16
+GitHub  → 2:1
+Social  → 1:1 / 4:5
+```
+
+---
+
+# 3. Qué formato usar
+
+### PNG
+
+Usar para:
+
+- screenshots
+- UI
+- dashboards
+- texto
+- logos
+- thumbnails
+- transparencia
+
+**Default para screenshots.**
+
+### JPG
+
+Usar para:
+
+- fotografías
+- backgrounds complejos
+
+Evitar para UI con texto pequeño.
+
+### WebP
+
+Usar para:
+
+- portfolio
+- websites
+- documentación web
+
+Muy buena relación calidad/peso.
+
+### GIF
+
+Usar para:
+
+- demos cortas
+- README
+- loops simples
+
+Preset:
+
+```text
+5–15 segundos
+10–15 FPS
+800–1200 px ancho
+loop
+sin audio
+```
+
+Si pesa demasiado → **MP4**.
+
+### MP4
+
+Default:
+
+```text
+H.264
+AAC
+30 FPS
+CRF 20–23
+faststart
+```
+
+---
+
+# 4. Screenshots
+
+Antes de capturar:
+
+- [ ] UI limpia
+- [ ] datos realistas
+- [ ] sin notificaciones
+- [ ] sin errores
+- [ ] zoom consistente
+- [ ] scroll preparado
+- [ ] animaciones terminadas
+- [ ] cursor fuera del contenido importante
+- [ ] resolución/viewport consistente
+
+## Desktop
+
+```text
+1920×1080
+16:9
+PNG
+```
+
+## Mobile
+
+```text
+1080×1920
+9:16
+PNG
+```
+
+**No conviertas desktop en mobile recortándolo.**
+
+Captura el layout mobile real.
+
+---
+
+# 5. Presentar screenshots
+
+No siempre publiques la captura cruda.
+
+Puedes usar:
+
+```text
+BACKGROUND
+
+      padding
+
+┌──────────────────────┐
+│                      │
+│      APP / UI        │
+│                      │
+└──────────────────────┘
+
+radius + subtle shadow
+```
+
+Usa:
+
+- fondo simple
+- padding
+- contraste
+- border-radius consistente
+- sombra suave
+- UI grande
+
+**La aplicación es protagonista.**
+
+---
+
+# 6. Banners
+
+Crea 3 tipos.
+
+## Brand Banner
+
+```text
+LOGO
+PROJECT NAME
+Short tagline
+```
+
+Para:
+
+- branding
+- GitHub
+- portfolio
+- social preview
+
+---
+
+## Product Banner
+
+```text
+PROJECT NAME
+
+[ Screenshot / Mockup ]
+
+Short description
+```
+
+Para enseñar **cómo se ve**.
+
+---
+
+## Feature Banner
+
+```text
+FEATURE NAME
+
+[ UI específica ]
+
+Short benefit
+```
+
+Para enseñar **una funcionalidad**.
+
+---
+
+# 7. Banner Master
+
+No diseñes cada tamaño desde cero.
+
+Crea un sistema adaptable:
+
+```text
+MASTER
+  │
+  ├── 16:9
+  ├── 9:16
+  ├── 1:1
+  ├── 4:5
+  └── 2:1
+```
+
+Mantén como componentes separados:
+
+```text
+background
+logo
+project-name
+tagline
+UI
+feature-copy
+decorations
+```
+
+Así puedes reposicionarlos según ratio.
+
+**No hagas solamente crop.**
+
+---
+
+# 8. Safe Areas
+
+Mantén lo importante lejos de los bordes:
+
+- logo
+- título
+- tagline
+- CTA
+- feature principal
+
+Especialmente en:
+
+```text
+9:16
+banners
+social covers
+video vertical
+```
+
+Las plataformas pueden colocar UI encima o aplicar crops diferentes.
+
+Si una plataforma no publica una safe area oficial, usa márgenes conservadores en vez de asumir números exactos.
+
+---
+
+# 9. GitHub Social Preview
+
+```text
+1280×640
+2:1
+PNG/JPG
+```
+
+Composición:
+
+```text
+┌──────────────────────────────────┐
+│                                  │
+│  PROJECT NAME                    │
+│  Short tagline          [ LOGO ] │
+│                                  │
+└──────────────────────────────────┘
+```
+
+No metas toda la aplicación microscópicamente.
+
+Debe entenderse rápidamente.
+
+---
+
+# 10. Hero de README
+
+Arriba del README puedes colocar:
+
+```text
+# Project Name
+
+Short description
+
+[ HERO / DEMO ]
+
+Features
+...
+```
+
+El hero puede mostrar:
+
+```text
+Project name
++
+UI principal
++
+tagline corto
+```
+
+No entierres la demo después de toda la documentación.
+
+---
+
+# 11. Thumbnail / primer frame
+
+Estos conceptos son diferentes:
+
+```text
+FIRST FRAME
+≠
+THUMBNAIL
+≠
+POSTER
+≠
+SOCIAL PREVIEW
+```
+
+Pero pueden compartir diseño.
+
+## Primer frame
+
+Debe verse bien por sí solo.
+
+Evita:
+
+- transición empezada
+- cursor raro
+- UI cargando
+- pantalla vacía
+- elementos cortados
+
+Ideal:
+
+```text
+PROJECT
+Short tagline
+
+[ UI lista ]
+
+→ comienza demo
+```
+
+En GIF, además piensa:
+
+```text
+último frame
+      ↓
+primer frame
+```
+
+El loop debe sentirse natural.
+
+---
+
+# 12. Demo
+
+Guion simple:
+
+```text
+ESTADO INICIAL
+      ↓
+ACCIÓN
+      ↓
+RESULTADO
+      ↓
+ACCIÓN
+      ↓
+RESULTADO FINAL
+```
+
+Elimina:
+
+- esperas
+- errores
+- clicks incorrectos
+- búsqueda del botón
+- movimientos inútiles
+- loading innecesario
+
+---
+
+# 13. Cursor
+
+Cursor:
+
+- suave
+- directo
+- intencional
+- pausa breve antes del click
+- fuera del foco después
+
+Evita:
+
+```text
+círculos
+zig-zag
+temblores
+movimientos gigantes
+cursor encima del resultado
+```
+
+---
+
+# 14. Ritmo
+
+Para promoción:
+
+```text
+acción → resultado
+acción → resultado
+acción → resultado
+```
+
+No:
+
+```text
+acción
+↓
+2 segundos esperando
+↓
+scroll
+↓
+esperar
+↓
+acción
+```
+
+Puedes cortar tiempos muertos.
+
+---
+
+# 15. Duraciones
+
+| Tipo | Duración |
+|---|---:|
+| GIF README | **5–15 s** |
+| Social | **10–30 s** |
+| Demo | **15–45 s** |
+| Walkthrough | **30–90+ s** |
+
+Una demo promocional no necesita explicar toda la aplicación.
+
+---
+
+# 16. Video horizontal
+
+```text
+1920×1080
+16:9
+30 FPS
+H.264
+MP4
+```
+
+Ideal para:
+
+- desktop
+- portfolio
+- GitHub
+- YouTube
+- landing pages
+
+---
+
+# 17. Video vertical
+
+```text
+1080×1920
+9:16
+30 FPS
+H.264
+MP4
+```
+
+Ideal para:
+
+- mobile
+- Reels
+- Shorts
+- TikTok
+- Stories
+
+**Vertical ≠ crop del horizontal.**
+
+Recompón la escena.
+
+---
+
+# 18. FFmpeg — MP4
+
+```bash
+ffmpeg -i input.mov \
+  -c:v libx264 \
+  -crf 22 \
+  -preset slow \
+  -c:a aac \
+  -b:a 128k \
+  -movflags +faststart \
+  output.mp4
+```
+
+Preset general:
+
+```text
+H.264
+CRF 20–23
+30 FPS
+AAC 128k
+faststart
+```
+
+---
+
+# 19. GIF optimizado
+
+### Crear palette
+
+```bash
+ffmpeg -i demo.mp4 \
+  -vf "fps=12,scale=1000:-1:flags=lanczos,palettegen" \
+  palette.png
+```
+
+### Crear GIF
+
+```bash
+ffmpeg -i demo.mp4 -i palette.png \
+  -filter_complex \
+  "fps=12,scale=1000:-1:flags=lanczos[x];[x][1:v]paletteuse" \
+  demo.gif
+```
+
+Pipeline:
+
+```text
+VIDEO
+ ↓
+CROP
+ ↓
+FPS
+ ↓
+RESIZE
+ ↓
+PALETTE
+ ↓
+GIF
+ ↓
+OPTIMIZE
+```
+
+---
+
+# 20. Accesibilidad
+
+- [ ] alt text
+- [ ] captions
+- [ ] subtítulos
+- [ ] buen contraste
+- [ ] texto legible
+- [ ] no depender solo del color
+- [ ] evitar flashes
+- [ ] demo comprensible sin audio
+
+---
+
+# 21. Naming
+
+Bueno:
+
+```text
+dashboard-desktop-1920x1080.png
+dashboard-mobile-1080x1920.png
+
+demo-desktop-16x9.mp4
+demo-mobile-9x16.mp4
+
+github-social-preview-1280x640.png
+
+project-thumbnail-16x9.png
+project-thumbnail-9x16.png
+```
+
+Malo:
+
+```text
+image.png
+image2.png
+final.png
+final-final.png
+FINAL-v2.png
+```
+
+---
+
+# 22. Carpetas
+
+```text
+media/
+├── banners/
+│   ├── brand/
+│   ├── product/
+│   └── feature/
+│
+├── social/
+│   ├── github-preview.png
+│   ├── square.png
+│   └── portrait.png
+│
+├── screenshots/
+│   ├── desktop/
+│   └── mobile/
+│
+├── demos/
+│   ├── demo-16x9.mp4
+│   ├── demo-9x16.mp4
+│   └── demo-readme.gif
+│
+├── thumbnails/
+│   ├── thumbnail-16x9.png
+│   └── thumbnail-9x16.png
+│
+└── masters/
+```
+
+---
+
+# 23. Workflow
+
+## Paso 1 — Preparar
+
+```text
+UI limpia
+datos listos
+viewport
+cursor
+scroll
+notificaciones OFF
+```
+
+## Paso 2 — Capturar masters
+
+```text
+Desktop → 16:9
+Mobile  → 9:16
+```
+
+## Paso 3 — Derivar
+
+```text
+MASTER
+  │
+  ├── screenshots
+  ├── MP4
+  ├── GIF
+  ├── thumbnails
+  ├── banners
+  ├── social preview
+  ├── 1:1
+  └── 4:5
+```
+
+## Paso 4 — Optimizar
+
+```text
+PNG → compress
+GIF → palette + optimize
+MP4 → H.264 + CRF
+```
+
+## Paso 5 — Publicar
+
+```text
+README
+GitHub Social Preview
+Portfolio
+Social
+Video platforms
+```
+
+---
+
+# 24. Regla de oro
+
+Cada asset responde **UNA pregunta**:
+
+### ¿Qué es?
+
+```text
+Brand Banner
+```
+
+### ¿Cómo se ve?
+
+```text
+Screenshot / Product Banner
+```
+
+### ¿Cómo funciona?
+
+```text
+GIF / MP4
+```
+
+### ¿Qué feature importa?
+
+```text
+Feature Banner
+```
+
+No intentes explicar todo en una sola pieza.
+
+---
+
+# TL;DR
+
+Si no quieres pensar:
+
+```text
+DESKTOP
+1920×1080
+16:9
+
+MOBILE
+1080×1920
+9:16
+
+GITHUB PREVIEW
+1280×640
+2:1
+
+SOCIAL SQUARE
+1080×1080
+1:1
+
+SOCIAL PORTRAIT
+1080×1350
+4:5
+
+SCREENSHOTS
+PNG
+
+VIDEO
+MP4 / H.264 / 30 FPS
+
+README ANIMATION
+GIF / 10–15 FPS / 5–15s
+```
+
+## Fórmula
+
+```text
+UI LIMPIA
+    ↓
+MASTER DESKTOP + MOBILE
+    ↓
+SCREENSHOTS + VIDEO
+    ↓
+GIF
+    ↓
+THUMBNAILS
+    ↓
+BANNERS
+    ↓
+SOCIAL PREVIEWS
+    ↓
+OPTIMIZE
+    ↓
+PUBLISH
+```

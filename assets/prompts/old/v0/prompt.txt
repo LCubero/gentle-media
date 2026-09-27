@@ -1,0 +1,102 @@
+## Production prompt
+
+### Role and outcome
+
+Act as a senior motion designer, creative director, technical researcher, editor, and sound designer. Create a premium, credible motion-graphics film about **Gentle-AI, gentle-shell, and Engram**. Show real engineering concepts through visual cause and effect, not a generic AI advertisement. The emotional payoff is control: the developer directs a visible workflow, the exact candidate can be inspected, and relevant project knowledge survives the session.
+
+**North star:** SHOW THE MECHANISM. THEN NAME THE VALUE.
+
+**Parameter:** `TARGET_DURATION_SECONDS = 60` (editable). Default output: 16:9, 1920 × 1080, 30 fps, stereo sound, English on-screen text, with a readable end card. These are production defaults, not product claims. When rendering is available, also supply a silent/caption-safe variant if practical. Keep essential titles inside a conservative 10% safe margin; do not rely on tiny text to carry the story.
+
+**Honesty about deliverables:** First provide (1) a source/claim ledger, (2) a timecoded shot list including text, action, transition, duration, and sound, and (3) an asset list identifying authentic versus abstract imagery. Then render the film only if the environment actually supports timeline, assets, sound, and export. If it does not, deliver a production-ready storyboard and motion specification rather than claiming to have generated an MP4. Do not call a browser animation or still montage a finished video.
+
+### Factual preflight — required before designing
+
+Inspect the current official primary sources below when available. Record the accessed revision/release and access date in the claim ledger. Prefer current product documentation for behavior; use brand assets for appearance and the marketing site for tone. If sources conflict, disclose the conflict and omit the unstable claim from screen rather than choosing a convenient marketing assertion. Product features depend on installation, host runtime, and the user's settings; do not present an optional integration as universal.
+
+| Product or concern | Primary references | What to verify |
+| --- | --- | --- |
+| Gentle-AI purpose and cross-agent behavior | [README](https://github.com/Gentleman-Programming/gentle-ai), [intended usage](https://github.com/Gentleman-Programming/gentle-ai/blob/main/docs/intended-usage.md), [usage / ODD](https://github.com/Gentleman-Programming/gentle-ai/blob/main/docs/usage.md), [releases](https://github.com/Gentleman-Programming/gentle-ai/releases) | Configures existing agents; ODD, substantial feature records, work-unit commits; capabilities vary by runtime. |
+| RDD mechanism and ownership | [review integration](https://github.com/Gentleman-Programming/gentle-ai/blob/main/docs/review-integration.md), [intended usage](https://github.com/Gentleman-Programming/gentle-ai/blob/main/docs/intended-usage.md) | User-owned review switch, exact candidate frozen for review, provider-owned transitions and evidence, separate delivery decision. Do not claim a universal default switch state. |
+| gentle-shell product and real UI | [README](https://github.com/Gentleman-Programming/gentle-shell), [workspace reference](https://github.com/Gentleman-Programming/gentle-shell/blob/main/docs/gentle-shell.md), [official session capture](https://github.com/Gentleman-Programming/gentle-ai/blob/main/docs/assets/features/gentle-shell.png) | Pi-specific workspace, parent/focused agents, tasks, changes and status; actual pane hierarchy. Changes coverage is not a full Git audit. |
+| Engram architecture and memory protocol | [README](https://github.com/Gentleman-Programming/engram), [architecture](https://github.com/Gentleman-Programming/engram/blob/main/docs/ARCHITECTURE.md), [intended usage](https://github.com/Gentleman-Programming/engram/blob/main/docs/intended-usage.md) | Local SQLite + FTS5, Go binary, agent/MCP integration, curated memory, compact search results, detail retrieval, session handoff. Cloud is optional replication, not the default or the source of truth. |
+| Brand and positioning | [Gentleman Programming](https://gentlemanprogramming.com/), [Gentle-AI brand assets](https://github.com/Gentleman-Programming/gentle-ai/tree/main/docs/assets/brand), [gentle-shell brand assets](https://github.com/Gentleman-Programming/gentle-shell/tree/main/docs/assets/brand), [Engram brand assets](https://github.com/Gentleman-Programming/engram/tree/main/assets/branding) | Exact wordmarks, logo usage, type and rose accent. Do not synthesize lookalike marks. |
+
+If browsing is unavailable, use supplied authentic assets and label unverified points as conceptual; do not invent commands, screenshots, code, repository names, benchmarks, percentages, customer results, or UI behavior. Check permitted use of marks and licensed music/sounds before publishing.
+
+### One coherent product story
+
+- **Gentle-AI** is the cross-agent engineering environment/configurator: it reinforces the coding agent a developer already uses. ODD supplies proportional workflow; enabled RDD reviews an exact candidate. It does not replace the underlying agent.
+- **gentle-shell** is the Pi-specific coding-agent workspace where a developer directs the parent session, inspects changes and tasks, and can use bounded focused agents. It is not the UI of every Gentle-AI integration.
+- **Engram** is separate, agent-agnostic persistent memory. It keeps curated observations in local storage; agents can search compact results and fetch only the useful details. Optional sharing/sync must not be depicted as automatic.
+
+The relationship is **not** three interchangeable apps or a chain that every installation must use. Visually show one example developer setup integrating them; identify the connections as an illustrative configured workflow. End with: **MEMORY · WORKFLOW · EVIDENCE**. Workspace/control is the visible experience connecting those pillars, not a fourth product.
+
+### Duration and adaptation
+
+Use these six elastic beats. For `TARGET_DURATION_SECONDS = D`, calculate each nominal duration as `D × weight / 60`. At the default 30 fps, choose a frame-aligned D (a multiple of 1/30 second); round cumulative beat boundaries to whole frames, assign rounding residual to the final beat, and ensure the exported frame count is `round(D × 30)`. If D is not frame-aligned, disclose the actual quantized duration as `round(D × 30) / 30` seconds instead of claiming exact D. Default boundaries: `0–5`, `5–17`, `17–29`, `29–41`, `41–53`, `53–60` seconds (weights **5 + 12 + 12 + 12 + 12 + 7 = 60**). Keep the order and the three essential demonstrations: proportional ODD, immutable RDD candidate, and Engram retrieval across sessions.
+
+- **45–90 seconds:** scale shots, holds, sound, and transitions; do not scale typography below legibility or add unsupported claims. At longer durations, give mechanisms more breathing room rather than adding product features.
+- **Below 45 seconds:** explicitly produce a reduced cut: one mechanism per product, remove cache and compaction details first, and drop secondary labels before shortening the three essential demonstrations. Do not speed up all captions uniformly. An extremely short cut may need a new storyboard rather than a proportional retime.
+- **Above 90 seconds:** expand the verified demonstrations with readable interaction and silence; do not repeat slogans.
+
+For every cut, present revised shot boundaries and check that their sum equals the actual frame-aligned output duration (D when D is frame-aligned; otherwise `round(D × 30) / 30` at 30 fps).
+
+### Six-beat storyboard — default 60 seconds
+
+#### 01 · 0–5s · Hook: a workspace forms
+
+Near-black frame. One authentic terminal cursor; a restrained rose accent indicates focus. A cursor extends into aligned routes, then into a feature path, a candidate boundary, and a searchable memory index. No code rain. Reveal **Gentle-AI** with a small supporting line: **THE DETERMINISTIC ENGINEERING ENVIRONMENT**. Establish that existing agent endpoints can be configured into a disciplined workflow, without implying all runtimes have identical capabilities. One visual line takes us into a small request.
+
+**Sound:** one close keystroke, a quiet alignment click, controlled low-frequency movement. Hold the title long enough to read.
+
+#### 02 · 5–17s · ODD: effort proportional to work
+
+A small, understood request follows the shortest route: **INTENT → EXPLORE → IMPLEMENT → CHECK**. Leave space around it. Reveal **KEEP SMALL WORK SMALL**. The same route receives a substantial feature: the geometry expands only then into a single feature document with **OBJECTIVE · SCOPE · TASKS · EVIDENCE · NEXT STEP**. Show one task becoming a bounded work unit: implementation with tests/docs where appropriate, applicable checks, a work-unit commit, and recorded progress. Advance to the next task rather than merging the whole feature into one giant commit. This is an illustrative workflow, not a fabricated screen recording.
+
+**Value after mechanism:** **WORK THAT CAN BE RESUMED** (secondary; omit if crowded). Transition via the last work-unit boundary into the exact candidate being considered for review. ODD does not automatically turn on RDD.
+
+#### 03 · 17–29s · RDD: exact candidate, attached evidence
+
+A candidate diff changes while work is active. A precise boundary forms; at the main sonic impact it **snaps into an immutable review subject**. Render an abstract identity token bound to the frozen candidate (for example, lineage/target or a clearly conceptual fingerprint); show a commit identity only when the depicted candidate is in fact a committed work unit. Nearby repository activity may continue, but the frozen candidate never changes. **DIFF · CHECKS · REVIEW EVIDENCE** route only to that frozen subject. Use a deterministic state path: **PREFLIGHT → FREEZE → REVIEW → OUTCOME**. Never imply model judgment alone proves correctness, that every candidate gets the same review depth, or that approval itself authorizes commit, push, PR, or release.
+
+Reveal **REVIEW THE EXACT CHANGE**. The freeze boundary morphs into an authentic-looking *layout* inspired by official gentle-shell captures, not a fictional repository UI. If an actual UI capture is unavailable, keep this pane abstract and unlabeled beyond verified terms.
+
+#### 04 · 29–41s · gentle-shell: developer-led workspace
+
+Reveal **gentle-shell**, explicitly **BUILT FOR PI**. One parent session remains dominant. Use the official workspace screenshot/reference to guide real layout: session transcript/editor, visible tasks and changes, agent activity and runtime/status where supported. The developer changes keyboard focus; one bounded **EXPLORE**, **IMPLEMENT**, and **VERIFY** branch appears and returns a concise result to the parent. These are roles in a directed process, not characters or a swarm. Show a real diff surface only if derived from approved source/capture; otherwise use abstract diff geometry with unreadable content. A Changes view must not suggest a complete scan of every Git edit.
+
+Reveal **YOU LEAD THE WORKSPACE**. Optional, only if authenticated and there is room: a brief **SKILL REGISTRY → FINGERPRINT → CACHE HIT** event, explicitly a registry scan cache, never an LLM inference/prompt/API cache. A selected project decision becomes the physical match-cut object entering memory.
+
+#### 05 · 41–53s · Engram: memory persists, retrieval stays selective
+
+Reveal **Engram — PERSISTENT MEMORY**. A useful decision/discovery from session 01 is saved as a compact structured observation. **SESSION 01 ENDS**: transient context disappears, the local memory record remains. Establish an intentionally simplified architecture in microtype: **AGENT → MCP → ENGRAM → SQLite + FTS5**; omit MCP if the illustrative client path does not use it. **SESSION 02 → SEARCH → COMPACT RESULTS → FETCH DETAIL → RELEVANT CONTEXT**. Only one selected observation expands into the active session; do not animate the entire database into the model. A surrounding timeline can appear when useful, but is not mandatory on every search.
+
+Reveal **FETCH ONLY WHAT MATTERS**. Optional secondary visual, only if readable: active context compacts while saved memory persists; a later search recovers relevant context. This is durable retrieval, not a claim that every piece of transient context is saved. If optional Engram Cloud is shown at all, label it as explicitly enabled replication with local SQLite remaining authoritative; do not imply automatic team-wide access or that `personal` scope is a privacy boundary.
+
+#### 06 · 53–60s · Resolve: one controlled setup, three values
+
+Pull back using objects we already saw: memory observation, ODD feature route, immutable RDD candidate, Pi workspace frame. Controlled rose lines connect the example setup. Hold three legible associations: **Engram → MEMORY**, **Gentle-AI / ODD → WORKFLOW**, **RDD → EVIDENCE**; gentle-shell remains the visible developer-controlled workspace around them. Collapse to one clean final lockup: **Gentle-AI · gentle-shell · Engram**, then **MEMORY · WORKFLOW · EVIDENCE**, then **Gentleman Programming**. Do not claim that all three components install together or that one is required for every user.
+
+**Sound:** reduce activity to a final mechanical lock, then a short quiet hold; avoid a generic corporate fade or trailer boom.
+
+### Visual, typography, and sound rules
+
+- Build motion from grid alignment, terminal focus, bounded Git topology, state routes, diff geometry, indexed memory, precise masks, match cuts, and subtle 2.5D depth. Every transition originates in an existing visual object: cursor → route → task → work unit → frozen candidate → workspace pane → saved memory → retrieved result → final topology.
+- For **determinism**, animate valid states and permitted transitions with exact endpoints. This describes controlled workflow/state handling, not a guarantee of flawless AI output.
+- Use near-black, charcoal, graphite, off-white, and rose-pink sampled from current official assets; do not invent brand color values. Rose means active, selected, saved, reviewed, or connected. Keep contrast sufficient for small labels and captions.
+- One hero statement at a time. Three large product names, three mechanism payoffs, one final synthesis; all other labels are optional micro-UI and may be removed if they cannot be read. Do not require the viewer to read the arrows, architecture labels, or task metadata to understand the action; communicate those through motion first. Avoid text-over-text and unreadably fast tag clouds. Allow visible pauses after the RDD snap, gentle-shell control demonstration, and Engram retrieval.
+- Audio is restrained electronic texture with keyboard focus, exact state clicks, a single meaningful RDD snap, search/retrieval ticks, and final lock. Use original or properly licensed material. Do not imply sound is verified unless the exported film was heard and checked.
+- Do not use robots, glowing brains, agent swarms, binary rain, Matrix code, generic cyan cyberpunk, stock offices, fake GitHub pages, invented terminal commands, fabricated readable code, fabricated dashboards or logos, numerical token/speed claims, excessive glitch/bloom/particles, or unsupported slogans.
+
+### Final production checks
+
+1. Provide a claim ledger mapping every meaningful on-screen factual statement to a current source; distinguish verified UI, abstract metaphor, and optional behavior. Omit disputed details instead of silently resolving them.
+2. Confirm shot boundaries sum to the frame-aligned output duration (`TARGET_DURATION_SECONDS` when exactly representable at the chosen fps); verify actual exported media duration, frame rate, resolution, and audio only if a file was truly rendered.
+3. Watch once with sound and once muted. A viewer should be able to explain: small work stays small; substantial work is recoverable; review attaches to an exact candidate; the developer leads the Pi workspace; memory survives and is searched before fetching detail.
+4. Check title hold time, legibility at phone size, caption-safe margins, reduced-flash behavior, music/asset rights, and final branding against official visual references.
+5. End with a short handoff: deliverables produced, verified claims, substitutions/abstract UI, unresolved facts, and any failed or skipped render checks. Never report an unrendered storyboard as a completed film.
+
+## Research notes for the producer
+
+The storyboard is intentionally a **configured example** of three related products, not a promise that every supported agent provides Pi's UI or that Engram is installed everywhere. Gentle-AI's current intended-usage and usage documents ground ODD's proportional route and work-unit commits; its review integration documentation grounds exact-candidate RDD and human-owned delivery. The gentle-shell workspace reference limits what a Changes view actually captures. Engram's README and architecture documents ground the single-Go-binary/SQLite+FTS5 core and progressive `mem_search` → `mem_get_observation` retrieval. The general marketing site can lag implementation details; in particular, do not encode an RDD-on/off default in the film without reconciling the selected release. These notes explain the choices above; they are not extra on-screen text.

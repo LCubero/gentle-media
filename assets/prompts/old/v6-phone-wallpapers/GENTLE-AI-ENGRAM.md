@@ -1,0 +1,5 @@
+Attach exactly two authentic transparent logos: one Gentle-AI and one Engram. Preserve their actual silhouettes, embedded wordmarks and colors; derive harmony from the assets, not invented official palettes or replacement icons.
+
+Create one static high-resolution 9:20 portrait phone wallpaper, approximately 1440 × 3200 px or higher. Balance both intact marks in the central crop-safe zone; keep the top clock and bottom phone-UI areas empty and edges expendable. Against a quiet layered-paper atmosphere, show one abstract path branching proportionally for small versus substantial ODD work, alongside a single selectively saved and retrieved memory fragment. This is an illustrative combination, not a required integration. Check legibility at phone scale.
+
+Only Gentle-AI and Engram may appear as on-image names, each once at most; do not duplicate embedded wordmarks. If lettering fails, leave space for manual typesetting of the exact names. No other text, slogans, claims, fake readable code, UI, screenshots, invented icons or imitation logos. Do not promise universal compatibility.

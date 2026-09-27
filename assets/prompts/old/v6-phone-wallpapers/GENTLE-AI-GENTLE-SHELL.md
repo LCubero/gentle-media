@@ -1,0 +1,5 @@
+Attach exactly two authentic transparent logos: one Gentle-AI and one gentle-shell. Preserve each real silhouette, embedded wordmark and colors; derive harmonious surroundings from these assets, without invented official palettes or imitation marks.
+
+Create one static high-resolution 9:20 portrait phone wallpaper, approximately 1440 × 3200 px or higher. Give both marks distinct, balanced space within the central crop-safe zone; leave the top clock and bottom phone-UI regions empty and edges expendable. A refined pair of abstract aligned pathways and a focused frame may suggest an illustrative configured workflow meeting a developer-led workspace, not a mandatory integration or a real screen. Check both marks at phone scale.
+
+Only Gentle-AI and gentle-shell may appear as on-image names, each once at most; never duplicate embedded wordmarks. If text fidelity fails, leave space for manual typesetting of these exact names. No other text, slogans, claims, fake readable code, UI, screenshots, invented icons or imitation logos. Do not promise universal compatibility.

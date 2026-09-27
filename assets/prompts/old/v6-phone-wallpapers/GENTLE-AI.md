@@ -1,0 +1,5 @@
+Attach exactly one authentic transparent Gentle-AI logo. Preserve its actual silhouette, embedded wordmark and colors; derive the surrounding color harmony from this asset, never invent an official palette or replacement icon.
+
+Create one static high-resolution 9:20 portrait phone wallpaper, approximately 1440 × 3200 px or higher. Place the intact mark in a spacious central crop-safe zone; keep the upper clock and lower phone-UI regions empty and peripheral edges expendable. Use restrained editorial depth and a few precise branching paths: a short path for small work, a more structured path for substantial work (proportional ODD). Suggest bounded exact-candidate review only when enabled (RDD) with an abstract fixed boundary; review approval does not authorize delivery. No required integration is implied. Check clarity at phone scale.
+
+The only permitted on-image name is Gentle-AI, once at most; do not duplicate an embedded wordmark. If exact lettering fails, leave space for manual typesetting instead. No other text, slogans, claims, fake readable code, UI, screenshots, invented icons or imitation logos. Do not claim universal phone compatibility.
