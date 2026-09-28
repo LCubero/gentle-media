@@ -1,2 +1,5 @@
 # Local Pi runtime state
 .atl/
+
+# Local ODD task records
+odd/
