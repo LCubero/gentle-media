@@ -1,0 +1,4 @@
+Video, 16:9 landscape, 1920×1080, 30 fps, 4 seconds.
+Picture: Static hold on the rose-and-wordmark end card exactly as in the start frame. Only a very subtle glow breathes on the rose and the block cursor blinks slowly. No camera move. Preserve the logo and its lettering exactly; add no text.
+Style: premium, restrained tech film. Near-black charcoal, one glowing rose-pink accent, soft bloom, fine film grain. No other text, numbers, version labels, model names or people. No flashing or strobing.
+Audio: A calm, warm adult narrator, neutral American English, unhurried, close-mic, dry studio sound. Say exactly once: "Gentle Shell. Built for Pi." Start speaking at 0.5 s and finish by 3.5 s. Sound effects: none after the line; a quiet room-tone tail to the end. No music.
