@@ -1,0 +1,43 @@
+1
+00:00:00,500 --> 00:00:04,500
+Gentle Shell. Built for Pi.
+
+2
+00:00:05,200 --> 00:00:09,500
+One workspace. You lead the work.
+
+3
+00:00:10,000 --> 00:00:14,500
+Keep your session and next steps in view.
+
+4
+00:00:15,300 --> 00:00:20,000
+Small work stays small.
+
+5
+00:00:20,500 --> 00:00:25,500
+Focused help returns to the parent session.
+
+6
+00:00:26,300 --> 00:00:31,500
+Inspect captured write and edit changes.
+
+7
+00:00:32,000 --> 00:00:37,500
+A Changes view is not a full Git audit.
+
+8
+00:00:38,300 --> 00:00:44,000
+See agent activity without losing the thread.
+
+9
+00:00:44,500 --> 00:00:50,500
+You remain responsible for what happens next.
+
+10
+00:00:51,300 --> 00:00:56,000
+Your coding agent. Your workspace.
+
+11
+00:00:56,500 --> 00:01:00,000
+Gentle Shell. Built for Pi.

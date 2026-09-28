@@ -1,0 +1,43 @@
+1
+00:00:00,500 --> 00:00:04,500
+Gentle Shell. Diseñado para Pi.
+
+2
+00:00:05,200 --> 00:00:09,500
+Un espacio de trabajo que usted dirige.
+
+3
+00:00:10,000 --> 00:00:14,500
+Tenga a la vista la sesión y los próximos pasos.
+
+4
+00:00:15,300 --> 00:00:20,000
+El trabajo sencillo sigue siendo sencillo.
+
+5
+00:00:20,500 --> 00:00:25,500
+Los agentes enfocados vuelven a la sesión principal.
+
+6
+00:00:26,300 --> 00:00:31,500
+Examine los cambios registrados al escribir o editar.
+
+7
+00:00:32,000 --> 00:00:37,500
+La vista de cambios no es una auditoría completa de Git.
+
+8
+00:00:38,300 --> 00:00:44,000
+Vea la actividad de los agentes sin perder el hilo.
+
+9
+00:00:44,500 --> 00:00:50,500
+Usted decide qué ocurre después.
+
+10
+00:00:51,300 --> 00:00:56,000
+Su agente de programación. Su espacio de trabajo.
+
+11
+00:00:56,500 --> 00:01:00,000
+Gentle Shell. Diseñado para Pi.
