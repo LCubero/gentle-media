@@ -13,7 +13,7 @@ Attach these six files relative to `PROMPT.md` as visual references: three share
 
 - [Gentle-AI clean logo](../../logos/gentle-ai-logo-clean.png) — working identity and palette reference.
 - [Gentle-AI banner](./assets/gentle-ai-banner.png) — composition reference.
-- [gentle-shell clean logo](../../logos/gentle-shell-logo-clean.png) — primary gentle-shell visual reference; not verified as an official published asset.
+- [gentle-shell logo candidate](../../../logos/gentle-shell-01-nitido.png) — primary gentle-shell visual reference; not verified as an official published asset.
 - [gentle-shell banner](./assets/gentle-shell-banner.gif) — secondary source-repository context; exclude any platform wording from the generated artwork.
 - [Engram clean logo](../../logos/engram-logo-clean.png) — working identity and palette reference.
 - [Engram banner](./assets/engram-banner.png) — composition reference.

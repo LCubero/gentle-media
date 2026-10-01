@@ -1,6 +1,6 @@
 # Biblioteca de prompts de medios
 
-Esta carpeta reúne 24 prompts y seis documentos de apoyo. Seleccione un prompt según el formato y el producto, abra el archivo enlazado y copie su contenido completo; consulte los documentos de apoyo antes de reutilizar afirmaciones o marcas. Las versiones son iteraciones de trabajo, no sustitutos automáticamente actualizados ni especificaciones oficiales.
+Esta carpeta reúne 26 prompts y seis documentos de apoyo. Seleccione un prompt según el formato y el producto, abra el archivo enlazado y copie su contenido completo; consulte los documentos de apoyo antes de reutilizar afirmaciones o marcas. Las versiones son iteraciones de trabajo, no sustitutos automáticamente actualizados ni especificaciones oficiales.
 
 ## Prompts listos para adaptar
 
@@ -30,6 +30,8 @@ Esta carpeta reúne 24 prompts y seis documentos de apoyo. Seleccione un prompt 
 | v6, fondo vertical | Gentle-AI | [Gentle-AI v6](v6-phone-wallpapers/GENTLE-AI.md) |
 | v6, fondo vertical | gentle-shell | [gentle-shell v6](v6-phone-wallpapers/GENTLE-SHELL.md) |
 | v6, fondo vertical | Gentleman Programming | [Gentleman v6](v6-phone-wallpapers/GENTLEMAN.md) |
+| Wallpapers, escritorio | Ecosistema Gentle; 45 fondos | [Wallpapers de escritorio](Wallpapers/Desktop_Prompts-45-wallpapers-Gentle.md) |
+| Wallpapers, móvil | Ecosistema Gentle; 45 fondos | [Wallpapers de móvil](Wallpapers/Mobile_Prompts-45-wallpapers-Gentle.md) |
 
 ## Documentos de apoyo (no son prompts independientes)
 
@@ -44,6 +46,6 @@ Esta carpeta reúne 24 prompts y seis documentos de apoyo. Seleccione un prompt 
 
 Los adjuntos disponibles se organizan en subcarpetas `assets/` para la familia general y v3–v5; v2 incluye archivos PNG junto a `PROMPT.md`. La familia v6 no incluye adjuntos. Compruebe que cada imagen citada esté disponible antes de enviarla a una herramienta externa; no invente ni sustituya archivos ausentes.
 
-Por decisión del usuario se conservan nueve imágenes adicionales duplicadas entre la raíz de `general-ten-png-gif/` y su subcarpeta `assets/`; no se eliminan. `general-ten-png-gif/PROMPT.md` y `general-ten-png-gif/REFERENCES.md` enlazan tres logotipos PNG limpios candidatos en [`../logos/`](../logos/): `gentle-ai-logo-clean.png`, `gentle-shell-logo-clean.png` y `engram-logo-clean.png`. Los tres banners permanecen en `general-ten-png-gif/assets/`. `v3-ten-png-gif/COPY-SOURCES.md` enlaza la [investigación v2](v2-ten-png-gif/COPY-RESEARCH.md). Los PNG limpios aportados no acreditan adopción oficial ni licencia de uso.
+Por decisión del usuario se conservan nueve imágenes adicionales duplicadas entre la raíz de `general-ten-png-gif/` y su subcarpeta `assets/`; no se eliminan. `old/general-ten-png-gif/PROMPT.md` y `old/general-ten-png-gif/REFERENCES.md` enlazan tres logotipos PNG limpios candidatos en [`../logos/`](../logos/): `gentle-ai-logo-clean.png`, `gentle-shell-01-nitido.png` y `engram-logo-clean.png`. Los tres banners permanecen en `general-ten-png-gif/assets/`. `v3-ten-png-gif/COPY-SOURCES.md` enlaza la [investigación v2](v2-ten-png-gif/COPY-RESEARCH.md). Los PNG limpios aportados no acreditan adopción oficial ni licencia de uso.
 
 Los logotipos y marcas propuestos en estos ensayos son referencias creativas aportadas para los prompts, **no prueba de que sean identidades oficiales aprobadas**. Verifique derechos, procedencia y vigencia de cada imagen y de cada afirmación antes de publicar.

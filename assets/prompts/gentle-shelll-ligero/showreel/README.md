@@ -17,6 +17,15 @@ Abre `gentle-shell.html` sin conexión y revisa 16x9 y 9x16, cuadro inicial, rec
 
 Si el HTML incluye una mezcla real de 44 s con la voz correcta, puedes usarla. Si no, usa [`elevenlabs.md`](elevenlabs.md) para generar nueve MP3 ingleses `voice/01.mp3` … `voice/09.mp3`; escucha que cada uno termine dentro de su ventana. El exportador prioriza estos archivos cuando existen. Sin ellos ni mezcla incrustada, habrá silencio; no reutilices los once clips antiguos de 60 s. [`subtitles.en.srt`](subtitles.en.srt) y [`subtitles.es.srt`](subtitles.es.srt) son externos y acompañan el MP4, nunca van quemados en el canvas.
 
+## Ejemplos guardados (borradores sin validar)
+
+En [`outputs/6_gentle-shelll-ligero_showreel/`](../../../../outputs/6_gentle-shelll-ligero_showreel/) se conservan:
+
+- [`gentle-shell_astra.html`](../../../../outputs/6_gentle-shelll-ligero_showreel/gentle-shell_astra.html) y [`gentle-shell_calude.html`](../../../../outputs/6_gentle-shelll-ligero_showreel/gentle-shell_calude.html).
+- Los nueve audios `01.mp3`, `02.mp3`, `03.mp3`, `04.mp3`, `05.mp3`, `06.mp3`, `07.mp3`, `08.mp3` y `09.mp3`.
+
+Son ejemplos sin validación visual ni escucha acreditadas, no una entrega final aprobada. Esta carpeta de ejemplos es distinta de `out/`, el destino local del exportador.
+
 ## Exportar solo después de revisar
 
 Con Node, `ffmpeg`/`ffprobe`, Chrome o Edge y `puppeteer-core` ya disponibles en el entorno:
