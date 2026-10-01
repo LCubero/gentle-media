@@ -1,0 +1,35 @@
+1
+00:00:00,400 --> 00:00:04,600
+Gentle Shell reúne a tu agente de programación en un solo espacio de consola.
+
+2
+00:00:05,200 --> 00:00:09,700
+Tu sesión, tareas y estado de ejecución permanecen a la vista.
+
+3
+00:00:10,200 --> 00:00:14,700
+Gentle Shell destaca lo relevante para el trabajo que tienes entre manos.
+
+4
+00:00:15,200 --> 00:00:19,700
+Explora una tarea pequeña y mantenla en la sesión principal.
+
+5
+00:00:20,200 --> 00:00:24,700
+Para el trabajo acotado, un agente enfocado devuelve un resultado.
+
+6
+00:00:25,200 --> 00:00:29,700
+Los cambios de herramientas realizados con éxito quedan capturados para inspeccionarlos.
+
+7
+00:00:30,200 --> 00:00:34,700
+Sigue los hilos de los agentes y vuelve a tu sesión.
+
+8
+00:00:35,200 --> 00:00:39,700
+Registra las tareas sustanciales, inspecciona el resultado y decide el siguiente paso.
+
+9
+00:00:40,200 --> 00:00:43,600
+Gentle Shell. Tu agente, tu espacio de trabajo.

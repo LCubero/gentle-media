@@ -1,0 +1,35 @@
+1
+00:00:00,400 --> 00:00:04,600
+Gentle Shell brings your coding agent into one console workspace.
+
+2
+00:00:05,200 --> 00:00:09,700
+Your session, tasks, and runtime stay in view.
+
+3
+00:00:10,200 --> 00:00:14,700
+Gentle Shell surfaces what matters for the work at hand.
+
+4
+00:00:15,200 --> 00:00:19,700
+Explore a small task, then keep it in the parent session.
+
+5
+00:00:20,200 --> 00:00:24,700
+For bounded work, a focused agent returns a result.
+
+6
+00:00:25,200 --> 00:00:29,700
+Successful tool edits appear as captured changes to inspect.
+
+7
+00:00:30,200 --> 00:00:34,700
+Follow agent threads, then return focus to your session.
+
+8
+00:00:35,200 --> 00:00:39,700
+Track substantial tasks, inspect the result, and choose the next step.
+
+9
+00:00:40,200 --> 00:00:43,600
+Gentle Shell. Your agent, your workspace.

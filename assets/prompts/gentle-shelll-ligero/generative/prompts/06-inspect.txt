@@ -1,0 +1,43 @@
+Act as a senior motion designer and sound designer. This is **piece 06 of 11** of a 60-second motion-graphics film about **Gentle Shell**, a Pi-specific coding-agent workspace. The film is built piece by piece and joined later, so every piece must follow the shared style below exactly.
+
+Deliver **one self-contained HTML file**: no external URLs, no CDN, images embedded as base64.
+
+## This piece: inspect (6 s)
+
+- **Scene:** Change viewer inspired by changes-view.png: a file list (16x9: narrow column on the left; 9x16: short strip on top) with one row highlighted in the accent, and a tall pane of abstract, illegible diff lines. A new block of lines slides into the pane and snaps into place with a thin accent bar on its left edge at 1.0 s. Then hold still, as if someone reads it.
+- **Starts on:** empty background. **Ends on:** change viewer at rest with the title visible.
+- **Title:** **SEE CAPTURED CHANGES** from 0.3 s to the end (continues in piece 07).
+- **Narration (exact, spoken once):** "Inspect captured write and edit changes.", starting at 0.3 s and finished by 5.5 s.
+- **Sound effects:** one short crisp capture snap at 1.0 s, then near silence. Very quiet room tone under everything. No music.
+
+## Shared style (identical in all 11 pieces)
+
+- Background `#0b0a0c`. Panels `#16131a` with 1 px outlines `#2e2833`. Illegible text bars `#3a3340`. Headline and light text `#ece5e9`. One accent, `#df327b` (a working value sampled from the logo, not an official brand spec), used for focus lines, glows, highlights and the cursor.
+- Headline: uppercase, `"Segoe UI", Arial, sans-serif`, bold. 16x9: 72 px, centered, baseline at y = 170. 9x16: 64 px, centered, baseline at y = 330, wrapped to at most 2 lines within 920 px.
+- Small text: `Consolas, "Cascadia Mono", monospace`, 24 px, `#8a8190`.
+- Fade titles and panels in and out over 0.3 s; ease every movement in and out. No flashes, no flicker, no fast cuts.
+- **Keep clear** for subtitles and phone controls, which are added later: in 16x9 the bottom 200 px; in 9x16 the bottom 45% and the top 13%.
+- Attached images: `gentle-shell-banner-keyframe.png` is the logo; draw it unchanged at 900 px wide, centered in the free area, in both formats. `gentle-shell.png`, `changes-view.png` and `agents-view.png` are layout references only: rebuild them with shapes and illegible bars and never show their text.
+- Never show version numbers, model names, prices, token counts, commands, readable code or fake screen recordings.
+
+## Technical contract (required: the piece is exported to MP4 frame by frame)
+
+```js
+window.Piece = {
+  id: '06', duration: 6, fps: 30,
+  formats: { '16x9': [1920, 1080], '9x16': [1080, 1920] },
+  ready: Promise,                       // resolves when images are decoded
+  draw(ctx, t, { format }) { ... },     // paints the whole frame at time t (0 <= t < 6)
+  audio: 'data:audio/...;base64,...',   // exactly 6.0 s, or null
+};
+```
+
+- `draw` must be a **pure function of `t`**: no `Math.random` (use a seeded function of `t`), no `Date`, no `performance.now`, no CSS animations, no `<video>`, no state carried between calls. It fills every pixel.
+- 9x16 is **recomposed** for a phone (one enlarged element at a time, stacked), not a crop of 16x9.
+- Preview page: the canvas, play/pause, a time scrubber and a 16x9 / 9x16 switch; `?format=9x16` selects the initial format.
+
+## Audio
+
+If you can generate audio, create one track of exactly 6.0 s: the narration line above in a calm, warm, adult, neutral American English voice, close-mic and dry, **the same voice in all 11 pieces**, plus the sound effects. Embed it as `Piece.audio` and play it in sync in the preview. If you cannot, set `audio: null` and play `../voice/06.mp3` in the preview at 0.3 s when that file exists.
+
+Before handing over, check and report: the line is inside its window, the title and logo rules are met, both formats render, and `draw` uses no forbidden time sources. Say plainly what you could not check.

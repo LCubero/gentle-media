@@ -1,9 +1,10 @@
 #!/usr/bin/env bash
-# Assemble the 11 generated clips into one exact 60-second master (1,800 frames at 30 fps).
+# Assemble the 11 exported piece clips into one exact 60-second master (1,800 frames at 30 fps).
 #
 # Usage: assemble.sh <16x9|9x16> [en|es|none] [audio-file]
 #   out/<format>/ must contain thumb.png (frame 0) and c01.mp4 ... c11.mp4.
-#   Subtitles default to en. An audio file replaces all clip audio (see audio-60s.txt).
+#   Subtitles default to en. An optional 60 s audio file replaces all clip audio.
+#   Titles are drawn by each piece, so only subtitles are burned in here.
 # Output: out/<format>/gentle-shell-<format>-<subs>.mp4
 set -euo pipefail
 
@@ -16,10 +17,8 @@ if [ -n "$audio" ]; then audio=$(cd "$(dirname "$audio")" && pwd)/$(basename "$a
 
 case $format in
   16x9) w=1920 h=1080
-        title_style="FontName=Consolas,Bold=1,FontSize=16,Alignment=6,MarginV=24,Outline=1,Shadow=0"
         sub_style="FontName=Consolas,FontSize=12,Alignment=2,MarginV=24,Outline=1,Shadow=0" ;;
   9x16) w=1080 h=1920
-        title_style="FontName=Consolas,Bold=1,FontSize=9,Alignment=6,MarginV=44,MarginL=24,MarginR=24,Outline=1,Shadow=0"
         sub_style="FontName=Consolas,FontSize=8,Alignment=2,MarginV=101,MarginL=24,MarginR=24,Outline=1,Shadow=0" ;;
   *) echo "format must be 16x9 or 9x16" >&2; exit 1 ;;
 esac
@@ -49,8 +48,7 @@ for i in "${!frames[@]}"; do
 done
 
 # Relative subtitle paths avoid the drive-letter escaping problem of the subtitles filter.
-cp "$kit/titles.en.srt" "$work/titles.srt"
-vf="[0:v][t]overlay=enable='eq(n,0)',subtitles=titles.srt:force_style='$title_style'"
+vf="[0:v][t]overlay=enable='eq(n,0)'"
 if [ "$subs" != none ]; then
   cp "$kit/../subtitles.$subs.srt" "$work/subs.srt"
   vf="$vf,subtitles=subs.srt:force_style='$sub_style'"

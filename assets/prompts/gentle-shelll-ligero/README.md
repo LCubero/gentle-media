@@ -2,7 +2,9 @@
 
 A script-first, source-bounded brief for an editor or motion designer. **No MP4, cleared distribution rights or license grant is included.** Generated narration and soundscape WAV drafts are local and intentionally not published; rebuild them with `build_audio.py`. Source checkout: Gentle Shell revision `b27bd328b95e83967ffc23f62b76e77901b91130`.
 
-**Generating with a text-to-video model?** Use the [generative path](generative/README.md): a thumbnail frame plus 11 paste-ready clip prompts per format with narration and sound in each prompt, and an `assemble.sh` that builds exact 60-second 16:9 and 9:16 masters.
+**Recommended: showreel path.** Paste one prompt into Claude or ChatGPT to get a single HTML showreel, review it in the browser, then export exact 60-second 16:9 and 9:16 MP4s with one command. Narration comes from Claude or from ElevenLabs. See [showreel/README.md](showreel/README.md).
+
+**Alternative: piece by piece with Claude.** Use the [piece path](generative/README.md): 11 paste-ready prompts, each producing one short HTML piece with its own title and audio. Every piece is exported to MP4 and `assemble.sh` joins them into exact 60-second 16:9 and 9:16 masters.
 
 ## Quick path
 
@@ -20,7 +22,8 @@ A script-first, source-bounded brief for an editor or motion designer. **No MP4,
 | `claims-and-assets.md` | Revision-specific claim provenance, four source paths and rights caveats. |
 | `subtitles.en.srt`, `subtitles.es.srt` | Alternative English and neutral Spanish timed subtitle drafts; exclusive final out-time 00:01:00,000. |
 | `assets/` | Byte-identical GIF and three PNG reference images from the pinned sibling checkout; these are historical frames, **not proof of current UI**. |
-| `generative/` | Text-to-video prompts (16:9 and 9:16), optional single audio prompt, English titles SRT and assembly script. |
+| `showreel/` | One-prompt HTML showreel (recommended), ElevenLabs narration guide and frame-by-frame MP4 exporter. |
+| `generative/` | Piece-by-piece path: 11 piece prompts, per-piece MP4 exporter and assembly script. |
 | `assets/gentle-shell-banner-keyframe.png` | Brightest frame (108) of the banner GIF, used as thumbnail and end-card reference. |
 | `build_audio.py` | Rebuild the offline, SRT-anchored English audio using Windows System.Speech **Microsoft Zira Desktop** (en-US), Python and numpy. |
 | `audio/narration.en.wav`, `audio/soundscape.wav`, `audio/mix.en.wav` | Local, unpublished generated drafts (not included in this kit): voice-only, original synthetic low bed, and combined mix; each 60.000 seconds, 24 kHz mono PCM16 when rebuilt. |

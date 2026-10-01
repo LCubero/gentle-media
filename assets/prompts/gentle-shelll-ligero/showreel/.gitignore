@@ -1,0 +1,3 @@
+# Rendered masters and generated voice lines stay local until their rights are cleared.
+out/
+voice/

@@ -1,112 +1,107 @@
-# Gentle Shell — video de 60 s con modelo generativo (16:9 y 9:16)
+# Gentle Shell — video por piezas con Claude (60 s, 16:9 y 9:16)
 
-Carpeta lista para generar el video con un modelo que produce imagen **y** audio en el mismo prompt (por ejemplo Astra 6). Cada `.txt` es un prompt completo: ábrelo, copia **todo** y pégalo tal cual.
+Claude genera el video en 11 piezas cortas. Cada pieza es un HTML con su propia animación, su título y su audio. Revisas cada pieza en el navegador, la pasas a MP4 en tu PC, y al final se unen en un video de 60 s exactos por formato.
+
+**Por qué HTML y no MP4 directo:** Claude web no entrega un MP4 con cuadros exactos. El HTML se exporta en tu PC con cuadros exactos, y si una pieza sale mal rehaces solo esa.
 
 ## Qué hay aquí
 
 ```text
 generative/
-├── 16x9/            ← 12 prompts para horizontal (00 = thumbnail, 01–11 = clips)
-├── 9x16/            ← los mismos 12 prompts recompuestos para vertical
-├── out/16x9/        ← aquí guardas lo que genere el modelo (horizontal)
-├── out/9x16/        ← aquí guardas lo que genere el modelo (vertical)
-├── audio-60s.txt    ← (opcional) prompt de audio único de 60 s
-├── titles.en.srt    ← títulos en pantalla; los pone el script
-└── assemble.sh      ← une todo en el video final de 60 s exactos
+├── prompts/          ← 11 prompts, uno por pieza (sirven para 16:9 y 9:16)
+├── pieces/           ← aquí guardas cada HTML que te da Claude: 01.html … 11.html
+├── voice/            ← (opcional) voces de ElevenLabs: 01.mp3 … 11.mp3
+├── out/16x9/, out/9x16/  ← clips y video final (no se suben al repo)
+├── export-piece.mjs  ← pasa una pieza (o todas) a MP4
+└── assemble.sh       ← une las 11 piezas en el video final
 ```
 
-Las imágenes de referencia están en `../assets/`.
+## Paso a paso
 
-## Paso a paso (haz primero 16x9 completo y luego repite con 9x16)
+### 1. Abre un solo chat de Claude para todo el video
 
-### 1. Thumbnail
+Usa **el mismo chat** para las 11 piezas, así el estilo y la voz se mantienen. En el primer mensaje adjunta las 4 imágenes de `../assets/`:
 
-- Pega `16x9/00-thumbnail.txt`.
-- Adjunta `../assets/gentle-shell-banner-keyframe.png`.
-- Guarda el resultado como **`out/16x9/thumb.png`**.
+- `gentle-shell-banner-keyframe.png` (el logo)
+- `gentle-shell.png`
+- `changes-view.png`
+- `agents-view.png`
 
-Es el frame 0 del video (un solo frame, como pide Alan) y el inicio del clip 1.
+### 2. Genera cada pieza, en orden
 
-### 2. Los 11 clips
+Por cada pieza:
 
-Genera uno por uno, en orden. Si el modelo pide duración, elige la más cercana **igual o mayor** a la de la tabla; el script recorta lo que sobre.
+1. Abre el `.txt` de `prompts/`, copia **todo** y pégalo en el chat.
+2. Descarga el HTML y guárdalo en `pieces/` con el número de la pieza: `01.html`, `02.html`…
+3. Ábrelo en el navegador y revisa los dos formatos (botón 16x9 / 9x16).
+4. Si algo está mal, pide el cambio en el mismo chat y vuelve a guardar el archivo con el mismo nombre.
 
-| Pega | Adjunta | Duración | Guarda como |
+| Pieza | Prompt | Duración | Qué dice la voz |
 | --- | --- | --- | --- |
-| `01-identify.txt` | `out/16x9/thumb.png` como **frame inicial** + `../assets/gentle-shell-banner-keyframe.png` | 5 s | `out/16x9/c01.mp4` |
-| `02-lead.txt` | `../assets/gentle-shell.png` | 5 s | `out/16x9/c02.mp4` |
-| `03-stay-oriented.txt` | `../assets/gentle-shell.png` | 5 s | `out/16x9/c03.mp4` |
-| `04-small-work.txt` | — | 5 s | `out/16x9/c04.mp4` |
-| `05-focused-help.txt` | `../assets/agents-view.png` | 6 s | `out/16x9/c05.mp4` |
-| `06-inspect.txt` | `../assets/changes-view.png` | 6 s | `out/16x9/c06.mp4` |
-| `07-honest-scope.txt` | `../assets/changes-view.png` | 6 s | `out/16x9/c07.mp4` |
-| `08-context.txt` | `../assets/agents-view.png` | 6 s | `out/16x9/c08.mp4` |
-| `09-responsibility.txt` | — | 7 s | `out/16x9/c09.mp4` |
-| `10-resolve.txt` | `../assets/gentle-shell-banner-keyframe.png` | 5 s | `out/16x9/c10.mp4` |
-| `11-hold.txt` | último frame de `c10` como **frame inicial** (o el keyframe) | 4 s | `out/16x9/c11.mp4` |
+| 01 | `01-identify.txt` | 5 s | Gentle Shell. Built for Pi. |
+| 02 | `02-lead.txt` | 5 s | One workspace. You lead the work. |
+| 03 | `03-stay-oriented.txt` | 5 s | Keep your session and next steps in view. |
+| 04 | `04-small-work.txt` | 5 s | Small work stays small. |
+| 05 | `05-focused-help.txt` | 6 s | Focused help returns to the parent session. |
+| 06 | `06-inspect.txt` | 6 s | Inspect captured write and edit changes. |
+| 07 | `07-honest-scope.txt` | 6 s | A Changes view is not a full Git audit. |
+| 08 | `08-context.txt` | 6 s | See agent activity without losing the thread. |
+| 09 | `09-responsibility.txt` | 7 s | You remain responsible for what happens next. |
+| 10 | `10-resolve.txt` | 5 s | Your coding agent. Your workspace. |
+| 11 | `11-hold.txt` | 4 s | Gentle Shell. Built for Pi. |
 
-Si el modelo no acepta imágenes adjuntas, pega solo el texto.
+**Revisa en cada pieza:**
 
-### 3. Revisa cada clip antes de seguir
-
-Regenera el clip si falla cualquiera de estos puntos:
-
-- [ ] La voz dice **exactamente** la frase del prompt y termina antes del final.
-- [ ] Suena como la misma voz de los clips anteriores.
-- [ ] No aparece texto legible, salvo el logo.
+- [ ] La voz dice exactamente la frase y termina antes del final.
+- [ ] Suena como la misma voz de las piezas anteriores.
+- [ ] El título está en el mismo lugar y con la misma letra que en las otras piezas.
 - [ ] No aparecen versiones, nombres de modelos ni precios.
-- [ ] No hay destellos ni parpadeos fuertes.
+- [ ] En 9x16 no hay nada importante arriba ni en la mitad de abajo (ahí van los subtítulos y los controles del celular).
+- [ ] Solo en la 01: el primer cuadro es el thumbnail.
 
-Si la voz cambia mucho entre clips, usa la opción del paso 5.
+### 3. Pasa las piezas a MP4
 
-### 4. Arma el video
+Desde esta carpeta, cada vez que una pieza quede bien:
 
-Desde la raíz del repositorio, en Git Bash (necesitas `ffmpeg` y `ffprobe`):
+```bash
+node export-piece.mjs 05        # solo la pieza 05, en los dos formatos
+node export-piece.mjs all       # las 11 piezas, en los dos formatos
+```
+
+- Cada pieza tarda unos segundos. Salen en `out/16x9/c05.mp4` y `out/9x16/c05.mp4`.
+- La pieza 01 también guarda el thumbnail (`thumb.png`).
+- Si aparece `warning: ... is not deterministic`, pídele a Claude que quite `Math.random`, `Date` o las animaciones CSS del dibujo y vuelve a exportar.
+
+### 4. Une el video
+
+Desde la raíz del repositorio, en Git Bash:
 
 ```bash
 bash assets/prompts/gentle-shelll-ligero/generative/assemble.sh 16x9 en
-```
-
-- Sale en `out/16x9/gentle-shell-16x9-en.mp4`.
-- Para subtítulos en español cambia `en` por `es`; para no poner subtítulos, usa `none`.
-- La última línea debe decir `1920,1080,1800 (expected 1920,1080,1800)`.
-
-### 5. (Opcional) Audio único de 60 s
-
-Úsalo solo si la voz varía demasiado entre clips.
-
-1. Pega `audio-60s.txt` en el modo de audio o texto-a-voz del modelo.
-2. Guarda el resultado en `out/16x9/` (por ejemplo `out/16x9/audio.wav`).
-3. Arma el video pasando ese archivo como tercer argumento; reemplaza el audio de todos los clips:
-
-```bash
-bash assets/prompts/gentle-shelll-ligero/generative/assemble.sh 16x9 en assets/prompts/gentle-shelll-ligero/generative/out/16x9/audio.wav
-```
-
-### 6. Repite con vertical
-
-Haz los pasos 1–5 con la carpeta `9x16/`, guardando en `out/9x16/`. Luego:
-
-```bash
 bash assets/prompts/gentle-shelll-ligero/generative/assemble.sh 9x16 en
 ```
 
-La última línea debe decir `1080,1920,1800 (expected 1080,1920,1800)`.
+- El segundo argumento elige los subtítulos: `en`, `es` o `none`.
+- El video queda en `out/<formato>/gentle-shell-<formato>-<subtítulos>.mp4`.
+- La última línea debe decir `1920,1080,1800 (expected 1920,1080,1800)` o `1080,1920,1800 (expected 1080,1920,1800)`.
 
-### 7. Revisión final
+### 5. Revisión final
 
-Mira cada video dos veces: una con sonido y otra en silencio, y en tamaño de escritorio y de celular. Comprueba que:
+Mira cada video con sonido y en silencio, en pantalla grande y en tamaño celular, y comprueba que:
 
-- [ ] El primer frame es el thumbnail.
-- [ ] Los títulos y subtítulos no se cortan ni quedan detrás de los controles del celular.
-- [ ] La voz no se pisa con el corte de cada clip.
+- [ ] Las uniones entre piezas no saltan (sobre todo 02→03, 06→07, 08→09 y 10→11, donde el título o la imagen continúan).
+- [ ] La voz no se corta en ningún empalme.
 
-## Por qué el texto no lo genera el modelo
+## Si la voz de Claude cambia entre piezas
 
-Los modelos de video deforman las letras, y los screenshots de referencia muestran nombres de modelos y versiones (regla de Alan: no poner versiones). Por eso los prompts piden imagen sin texto, salvo el logo, y `assemble.sh` agrega los títulos y los subtítulos.
+Genera las líneas en ElevenLabs siguiendo [`../showreel/elevenlabs.md`](../showreel/elevenlabs.md) y guárdalas aquí en `voice/01.mp3` … `voice/11.mp3`. Puedes hacerlo solo con las que suenen distinto: si existe `voice/NN.mp3`, `export-piece.mjs` usa esa voz en lugar del audio de la pieza y la coloca en su segundo exacto. Los efectos de sonido de esa pieza se pierden; si los quieres, pídele a Claude la pieza sin voz y solo con efectos.
 
-## Límites
+## Requisitos
 
-- Los archivos de `out/` no se suben al repositorio (ver `out/.gitignore`).
-- `assemble.sh` solo se probó con clips sintéticos. Los clips reales, la consistencia de la voz y la mezcla de audio están sin revisar.
+Node, `ffmpeg`/`ffprobe`, Chrome o Edge, y `puppeteer-core` (`npm install -g puppeteer-core`).
+
+## Estado
+
+- Se probó el flujo completo con 11 piezas sintéticas: exportación, voz de ElevenLabs en su segundo exacto, thumbnail en el cuadro 0 y unión con 1800 cuadros y 60,000 s en los dos formatos.
+- Todavía no se generó ninguna pieza real con Claude.
 - Antes de publicar, revisa los derechos de la voz generada y del uso del logo; ver [`../claims-and-assets.md`](../claims-and-assets.md).
